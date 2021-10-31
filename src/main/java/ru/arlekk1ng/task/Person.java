@@ -1,4 +1,4 @@
-package main_task;
+package ru.arlekk1ng.task;
 
 import java.util.Date;
 
@@ -9,9 +9,8 @@ public class Person {
     private Date birthday;
     private String address;
 
-    public Person(String firstName, String secondName, String lastName,
-                  Date birthday, String address)
-    {
+    public Person(String firstName, String secondName, String lastName, Date birthday,
+                  String address) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.lastName = lastName;
@@ -19,16 +18,8 @@ public class Person {
         this.address = address;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }
-
-    public String getLastName() {
-        return lastName;
+    public String getFullName() {
+        return String.join(" ", secondName, firstName, lastName);
     }
 
     public Date getBirthday() {
